@@ -1,0 +1,16 @@
+#id1{
+    text-decoration: overline;
+    text-transform: capitalize;
+}
+#id2 {
+    text-decoration: line-through;
+    text-transform: uppercase;
+}
+#id4 {
+    text-decoration: underline ;
+    text-transform: lowercase;
+}
+#id2 {
+    text-decoration: underline overline;
+    text-transform: none;
+}
