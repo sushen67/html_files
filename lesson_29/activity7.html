@@ -1,0 +1,24 @@
+<html>
+
+<body>
+    <h2>Javascript Arrows Functions</h2>
+    <p>This example shows an Arrow Function with a parameter.</p>
+    <p id="result"></p>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <script>
+        const add = (a, b) => a + b;
+        document.getElementById("result").innerHTML = add(4, 6);
+
+        const subtract = (a, b) => a - b;
+        document.getElementById("result1").innerHTML = subtract(6, 4);
+
+        const divide = (a, b) => a / b;
+        document.getElementById("result2").innerHTML = divide(10, 5);
+
+        const multiply = (a, b) => a * b;
+        document.getElementById("result3").innerHTML = multiply(10, 5);
+    </script>
+</body>
+</html>
