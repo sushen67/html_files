@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>JavaScript StopWatch</title>
+</head>
+
+<body>
+    <center>
+        <div class="wrapper">
+            <h1>Stopwatch</h1>
+            <p><span id="seconds">00</span>:<span id="milliseconds">00</span></p>
+            <button id="button-start">Start</button>
+            <button id="button-stop">Stop</button>
+            <button id="button-reset">Reset</button>
+        </div>
+    </center>
+    <script>
+        window.onload = function () {
+            var seconds = 0;
+            var milliseconds = 0;
+            var appendMilliseconds = document.getElementById("milliseconds");
+            var appendSeconds = document.getElementById("seconds");
+            var buttonStart = document.getElementById("button-start");
+            var buttonStop = document.getElementById("button-stop");
+            var buttonReset = document.getElementById("button-reset");
+            var Interval;
+
+            buttonStart.onclick = function () {
+                clearInterval(Interval);
+                Interval = setInterval(startTimer, 10);
+            };
+            buttonStop.onclick = function () {
+                clearInterval(Interval);
+            };
+            buttonReset.onclick = function () {
+                clearInterval(Interval);
+                milliseconds = 0;
+                seconds = 0;
+                appendMilliseconds.innerHTML = "00";
+                appendSeconds.innerHTML = "00";
+            };
+
+            function startTimer() {
+                milliseconds++;
+                appendMilliseconds.innerHTML = milliseconds <= 9 ? "0" + milliseconds : milliseconds;
+                if (milliseconds > 99) {
+                    seconds++;
+                    appendSeconds.innerHTML = seconds <= 9 ? "0" + seconds : seconds;
+                    milliseconds = 0;
+                    appendMilliseconds.innerHTML = "00";
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

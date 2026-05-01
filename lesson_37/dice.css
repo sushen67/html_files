@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#dice {
+    font-size: 320px;
+    display: inline-block;
+    user-select: none;
+}
+
+#dice:hover {
+    cursor: pointer;
+    color: #555;
+}
